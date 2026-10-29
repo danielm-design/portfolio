@@ -1,0 +1,144 @@
+@font-face { font-family: jostRegular;  src: url(Jost-Regular.ttf); }
+@font-face { font-family: jostMedium;   src: url(Jost-Medium.ttf);  }
+
+body {
+    background-color: #151C24;
+    background-image: url(mainbg.png);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    height:100%;
+    font-family: jostRegular, Arial, Helvetica, sans-serif;
+}
+
+
+#header {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    color: #ffffff;
+    font-size: xx-large;
+    text-align: left;
+    margin: auto;
+}
+
+#header > h1 {
+    margin-bottom: 0%;
+}
+#header > h2 {
+    margin-top: 0%;
+    font-size: x-large;
+    margin-left: 0.5em;
+}
+#header > p {
+    margin-top: 0%;
+    font-size: large;
+    margin-left: 0.7em;
+    width: 60%;
+}
+
+#main {
+    width: 100%;
+    height:100%;
+    margin: auto;
+}
+
+div.mainFlex {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 97vh;
+    margin-left: 6em;
+    gap: 10px 10px;
+}
+
+div.coverArt {
+    width: 100%;
+    margin: auto;
+    aspect-ratio: 3 / 5;
+    background-size: 100% auto;
+}
+
+div.coverOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: #CC252D;
+    opacity: 0%;
+}
+
+div.coverOverlay:hover {
+    animation: hoverCover 0.3s;
+    animation-fill-mode: forwards;
+}
+
+p {
+    margin: auto;
+    color: #ffffff;
+}
+
+@keyframes hoverCover {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 20%;
+    }
+}
+
+#wyrdwicCover {
+    background-image: url(wyrdwiccover.png);
+    background-color: #CC252D;
+}
+
+#aimlessCover {
+    background-image: url(aimlesscover.png);
+    background-color: #20142E;
+}
+
+#otherCover {
+    background-image: url(othercover.png);
+    background-color: #337BCC;
+}
+
+@media screen and (max-width:1000px) {
+    body {
+        background-image: url(mainbgMobile.png);
+    }
+    #main {
+        flex-direction: column;
+    }
+    div.mainFlex {
+        flex-direction: column;
+        margin: auto;
+    }
+    #header {
+        flex-direction: column;
+    }
+    #header > p {
+        margin-top: 0%;
+        font-size: large;
+        margin: auto;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    .columns {
+        flex-direction: column;
+    }
+    .screenshot {
+        width: 100%;
+    }
+    #boxArt {
+        width: 100%
+    }
+    #steamLink {
+        margin: auto;
+    }
+    .backgroundArt {
+        width: 100%;
+    }
+    .mobileHide {
+        display: none;
+    }
+    .mobileShow {
+        display: flex;
+    }
+}
